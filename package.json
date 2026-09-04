@@ -1,0 +1,26 @@
+{
+  "name": "xhs-g4",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:fixed": "vite --host 127.0.0.1 --port 52880 --strictPort",
+    "build": "vite build",
+    "test": "node --test server/codex/cloudProvider.test.mjs server/codex/coverImage.test.mjs server/xhs/runXhs.test.mjs server/integrations/health.test.mjs server/runtime/toolPaths.test.mjs",
+    "setup:xhs": "node scripts/setup-xhs.mjs",
+    "setup:xhs-browser": ".tools\\xhs\\Scripts\\python.exe -m camoufox fetch",
+    "preview": "vite preview --host 127.0.0.1",
+    "preview:fixed": "vite preview --host 127.0.0.1 --port 52880 --strictPort",
+    "launch:fixed": "node scripts/start-fixed.mjs",
+    "launch:dev": "node scripts/start-fixed.mjs --dev",
+    "deploy:local": "npm run build && npm run preview:fixed"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "lucide-react": "^0.468.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "vite": "6.4.2"
+  }
+}

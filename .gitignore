@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.npm-cache/
+.tools/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+
+output/
+test-results/
+
+.DS_Store
+*.log
